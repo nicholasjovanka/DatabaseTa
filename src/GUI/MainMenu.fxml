@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="BackgroundPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="pane-custom" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainMenu">
+   <children>
+      <Pane fx:id="MenuPane" prefHeight="35.0" prefWidth="1200.0" styleClass="pane-menu" stylesheets="@style.css">
+         <children>
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="1165.0" mnemonicParsing="false" onMouseClicked="#LogOut" prefHeight="35.0" prefWidth="35.0" styleClass="button-logout" stylesheets="@style.css">
+               <tooltip>
+                  <Tooltip text="Log out" />
+               </tooltip>
+            </Button>
+            <Button layoutX="1.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#MenuButton" prefHeight="35.0" prefWidth="35.0" styleClass="button-menu" stylesheets="@style.css">
+               <tooltip>
+                  <Tooltip text="Menu" />
+               </tooltip>
+            </Button>
+            <ImageView fitHeight="35.0" fitWidth="57.0" layoutX="582.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Pictures/Artboard-1-2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="ContentPane" layoutY="35.0" prefHeight="766.0" prefWidth="1200.0" styleClass="pane-custom" stylesheets="@style.css" />
+      <Pane fx:id="MenuDisplayPane" layoutY="34.0" prefHeight="665.0" prefWidth="200.0" styleClass="pane-side-menu" stylesheets="@style.css" visible="false">
+         <children>
+            <Button layoutX="14.0" layoutY="58.0" mnemonicParsing="false" onAction="#CartScene" prefHeight="51.0" prefWidth="174.0" styleClass="button-side-menu" stylesheets="@style.css" text="CART" textFill="WHITE" />
+            <Button layoutX="13.0" layoutY="132.0" mnemonicParsing="false" onAction="#GuestTableScene" prefHeight="51.0" prefWidth="174.0" styleClass="button-side-menu" stylesheets="@style.css" text="GUEST TABLE" textFill="WHITE" />
+            <Button layoutX="14.0" layoutY="204.0" mnemonicParsing="false" onAction="#ItemScene" prefHeight="51.0" prefWidth="174.0" styleClass="button-side-menu" stylesheets="@style.css" text="ITEM" textFill="WHITE" />
+            <Button layoutX="14.0" layoutY="282.0" mnemonicParsing="false" onAction="#ServiceScene" prefHeight="51.0" prefWidth="174.0" styleClass="button-side-menu" stylesheets="@style.css" text="SERVICES" />
+            <Button layoutX="13.0" layoutY="350.0" mnemonicParsing="false" onAction="#StoreScene" prefHeight="51.0" prefWidth="174.0" styleClass="button-side-menu" stylesheets="@style.css" text="STORE" />
+            <Button layoutX="14.0" layoutY="416.0" mnemonicParsing="false" onAction="#TaxScene" prefHeight="51.0" prefWidth="174.0" styleClass="button-side-menu" stylesheets="@style.css" text="TAX" />
+            <Button layoutX="13.0" layoutY="491.0" mnemonicParsing="false" onAction="#TransactionScene" prefHeight="51.0" prefWidth="174.0" styleClass="button-side-menu" stylesheets="@style.css" text="TRANSACTION" />
+            <Button layoutX="14.0" layoutY="562.0" mnemonicParsing="false" onAction="#TransactionDetailScene" prefHeight="51.0" prefWidth="174.0" styleClass="button-side-menu" stylesheets="@style.css" text="TRANSACTION DETAIL" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

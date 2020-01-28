@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="766.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ServiceController">
+   <children>
+      <TableView fx:id="table" layoutX="85.0" layoutY="61.0" prefHeight="541.0" prefWidth="1031.0">
+         <columns>
+            <TableColumn fx:id="col_serviceId" prefWidth="121.0" text="Service_ID" />
+            <TableColumn fx:id="col_servicePercentage" prefWidth="291.0" text="Service_Percentage" />
+            <TableColumn fx:id="col_serviceStart" prefWidth="334.0" text="Start_Date" />
+            <TableColumn fx:id="col_serviceEnd" minWidth="0.0" prefWidth="284.0" text="End_Date" />
+         </columns>
+      </TableView>
+      <Button fx:id="Refresh" contentDisplay="GRAPHIC_ONLY" layoutX="1083.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#refresh" prefHeight="34.0" prefWidth="33.0" styleClass="button-refresh" stylesheets="@style.css" text="Refresh" />
+      <Button fx:id="DeleteButton" contentDisplay="GRAPHIC_ONLY" layoutX="1011.0" layoutY="602.0" mnemonicParsing="false" onMouseClicked="#delete" prefHeight="35.0" prefWidth="35.0" styleClass="button-delete" stylesheets="@style.css" text="Delete" />
+      <Button fx:id="UpdateButton" contentDisplay="GRAPHIC_ONLY" layoutX="1046.0" layoutY="602.0" mnemonicParsing="false" onMouseClicked="#updateButton" prefHeight="35.0" prefWidth="35.0" styleClass="button-edit" stylesheets="@style.css" text="Update" />
+      <Button fx:id="InsertButton" contentDisplay="GRAPHIC_ONLY" layoutX="1081.0" layoutY="602.0" mnemonicParsing="false" onMouseClicked="#insertButton" prefHeight="35.0" prefWidth="35.0" styleClass="button-add" stylesheets="@style.css" text="Insert" />
+      <Pane fx:id="pane_insert" layoutX="284.0" layoutY="150.0" prefHeight="363.0" prefWidth="656.0" styleClass="pane-popup-generic" stylesheets="@style.css" visible="false">
+         <children>
+            <TextField fx:id="service_id" layoutX="207.0" layoutY="92.0" prefHeight="34.0" prefWidth="102.0" />
+            <Label layoutX="207.0" layoutY="126.0" text="Service_Id" textFill="WHITE" />
+            <TextField fx:id="service_percentage" layoutX="348.0" layoutY="92.0" prefHeight="34.0" prefWidth="102.0" />
+            <Label layoutX="348.0" layoutY="126.0" text="Service_Percentage" textFill="WHITE" />
+            <DatePicker fx:id="datepicker_start" editable="false" layoutX="207.0" layoutY="157.0" prefHeight="34.0" prefWidth="102.0" />
+            <Label layoutX="207.0" layoutY="191.0" text="Start_Date" textFill="WHITE" />
+            <DatePicker fx:id="datepicker_end" editable="false" layoutX="347.0" layoutY="157.0" prefHeight="34.0" prefWidth="102.0" />
+            <Label layoutX="347.0" layoutY="191.0" text="End_Date" textFill="WHITE" />
+            <Button layoutX="255.0" layoutY="259.0" mnemonicParsing="false" onMouseClicked="#insertService" prefHeight="25.0" prefWidth="147.0" styleClass="button-inverted" stylesheets="@style.css" text="CONFIRM" />
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="622.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#close" prefHeight="25.0" prefWidth="33.0" styleClass="button-close" stylesheets="@style.css" text="Button" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane_update" layoutX="294.0" layoutY="160.0" prefHeight="363.0" prefWidth="656.0" styleClass="pane-popup-generic" stylesheets="@style.css" visible="false">
+         <children>
+            <TextField fx:id="service_percentage2" layoutX="278.0" layoutY="88.0" prefHeight="34.0" prefWidth="102.0" />
+            <Label layoutX="278.0" layoutY="122.0" text="Service_Percentage" textFill="WHITE" />
+            <DatePicker fx:id="datepicker_start2" editable="false" layoutX="207.0" layoutY="157.0" prefHeight="34.0" prefWidth="102.0" />
+            <Label layoutX="207.0" layoutY="191.0" text="Start_Date" textFill="WHITE" />
+            <DatePicker fx:id="datepicker_end2" editable="false" layoutX="347.0" layoutY="157.0" prefHeight="34.0" prefWidth="102.0" />
+            <Label layoutX="347.0" layoutY="191.0" text="End_Date" textFill="WHITE" />
+            <Button layoutX="255.0" layoutY="259.0" mnemonicParsing="false" onMouseClicked="#updateService" prefHeight="25.0" prefWidth="147.0" styleClass="button-inverted" stylesheets="@style.css" text="CONFIRM" />
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="622.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#close" prefHeight="25.0" prefWidth="33.0" styleClass="button-close" stylesheets="@style.css" text="Button" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

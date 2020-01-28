@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="TransactionDetailPane" prefHeight="717.0" prefWidth="1090.0" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TransactionDetailController">
+    <children>
+        <TableView fx:id="TransactionDetailTableView" layoutX="232.0" layoutY="39.0" onMouseClicked="#selectId"
+                   prefHeight="495.0" prefWidth="695.0">
+            <columns>
+                <TableColumn fx:id="Transaction_Detail_Id" prefWidth="212.33334350585938" text="Transaction Detail Id"/>
+                <TableColumn fx:id="Transaction_Id" minWidth="0.0" prefWidth="180.0" text="Transaction Id"/>
+                <TableColumn fx:id="Item_Name" prefWidth="159.6666259765625" text="Item Name"/>
+                <TableColumn fx:id="Quantity" prefWidth="142.3333740234375" text="Quantity"/>
+            </columns>
+        </TableView>
+        <Text fill="#1904ff" layoutX="47.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Transaction Id:">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Text>
+        <TextField fx:id="trans_detail_id" layoutX="133.0" layoutY="122.0" prefHeight="25.0" prefWidth="94.0"/>
+        <Text layoutX="33.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.00000847876072"/>
+        <TextField fx:id="trans_id" layoutX="133.0" layoutY="194.0" prefHeight="25.0" prefWidth="94.0"/>
+        <Text fill="#1904ff" layoutX="78.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity:"
+              wrappingWidth="69.00000333786011">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Text>
+        <Text fill="#1904ff" layoutX="56.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Item Name:"
+              wrappingWidth="76.99998512864113">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Text>
+        <TextField fx:id="quantity" layoutX="133.0" layoutY="326.0" prefHeight="25.0" prefWidth="94.0"/>
+        <TextField fx:id="item_name" layoutX="133.0" layoutY="261.0" onMouseClicked="#openItem" prefHeight="25.0"
+                   prefWidth="94.0"/>
+        <Label layoutX="234.0" layoutY="541.0" onMouseClicked="#DeleteClick" prefHeight="36.0" prefWidth="77.0"
+               style="-fx-font-size: 25; -fx-text-fill: blue; -fx-underline: true;" text="Delete"/>
+        <Label layoutX="833.0" layoutY="541.0" onMouseClicked="#UpdateClick" prefHeight="36.0" prefWidth="87.0"
+               style="-fx-font-size: 25; -fx-text-fill: blue; -fx-underline: true;" text="Update"/>
+        <Label layoutX="545.0" layoutY="541.0" onMouseClicked="#Refresh" prefHeight="36.0" prefWidth="87.0"
+               style="-fx-font-size: 25; -fx-text-fill: blue; -fx-underline: true;" text="Refresh"/>
+        <Text fill="#1904ff" layoutX="5.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text=" Transaction Detail Id:" wrappingWidth="128.00003176927567">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Text>
+    </children>
+</AnchorPane>

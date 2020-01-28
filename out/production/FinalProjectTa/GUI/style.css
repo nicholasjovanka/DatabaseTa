@@ -1,0 +1,251 @@
+.pane{
+    -fx-background-color: #34495e;
+}
+.MenuBar{
+-fx-background-color: #f1c40f;
+}
+.pane-custom{
+-fx-background-color: #ecf0f1;
+-fx-border-color: #ab8936;
+-fx-border-width: 5px;
+}
+.pane-menu{
+-fx-background-color: #231F20;
+-fx-border-style: none;
+    -fx-border-width: 0;
+    -fx-border-insets: 0;
+}
+.pane-side-menu{
+-fx-background-color: #231F20;
+-fx-border-style: none;
+-fx-border-width: 0;
+-fx-border-insets: 0;
+}
+
+.button-side-menu{
+-fx-background-color: transparent;
+-fx-border-style: none;
+-fx-border-width: 0;
+-fx-border-insets: 0;
+-fx-text-fill: white;
+-fx-font-size: 15px;
+}
+.button-side-menu:hover{
+-fx-background-color: #ab8936;
+}
+.button-side-menu:focused{
+-fx-text-fill: #ab8936;
+}
+.button-side-menu:focused:hover{
+-fx-text-fill: #231F20;
+}
+.button-side-menu:pressed{
+-fx-background-color: #7A6227
+}
+
+.button-logout{
+-fx-background-image: url('Pictures/exit-512.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center;
+-fx-border-width: 0;
+-fx-background-color: transparent;
+-fx-background-size: 35px 35px;
+}
+.button-logout:focused{
+-fx-background-image: url('Pictures/exit-512-brown.png');
+}
+.button-logout:hover{
+-fx-background-image: url('Pictures/exit-512-brown.png');
+}
+
+.button-menu{
+-fx-background-image: url('Pictures/MenuButton-White.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center;
+-fx-border-width: 0;
+-fx-background-color: transparent;
+-fx-background-size: 35px 35px;
+}
+.button-menu:focused{
+-fx-background-image: url('Pictures/MenuButton-Brown.png');
+}
+.button-menu:hover{
+-fx-background-image: url('Pictures/MenuButton-Brown.png');
+}
+
+.button-generic{
+-fx-background-color: #bdc3c7;
+-fx-border-style: none;
+-fx-border-width: 0;
+-fx-border-insets: 0;
+-fx-text-fill: white;
+-fx-font-size: 16px;
+}
+.button-generic:hover{
+-fx-background-color: #ab8936;
+}
+.button-generic:pressed{
+-fx-background-color: #92762F;
+}
+.button-generic:focused{
+-fx-text-fill: #ab8936
+}
+.button-generic:focused:hover{
+-fx-text-fill: #231F20
+}
+
+.button-inverted{
+-fx-background-color: #bdc3c7;
+-fx-border-style: none;
+-fx-border-width: 0;
+-fx-border-insets: 0;
+-fx-text-fill: white;
+-fx-font-size: 16px;
+}
+.button-inverted:hover{
+-fx-text-fill: #92762F;
+}
+.button-inverted:hover:pressed{
+-fx-background-color: #767A7C;
+-fx-text-fill: #92762F;
+}
+.button-inverted:focused{
+-fx-text-fill: #ab8936;
+-fx-border-color: #7A6227;
+-fx-border-width: 2px;
+}
+.button-inverted:focused:hover{
+-fx-text-fill: white;
+}
+
+.button-delete{
+-fx-background-image: url('Pictures/delete-black.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center;
+-fx-border-width: 0;
+-fx-background-color: transparent;
+-fx-background-size: 30px 30px;
+}
+.button-delete:hover:pressed{
+-fx-background-image: url('Pictures/delete-white.png');
+-fx-background-color: red;
+}
+.button-delete:hover{
+-fx-background-image: url('Pictures/delete-white.png');
+-fx-background-color: #ab8936;
+}
+
+
+.button-refresh{
+-fx-background-image: url('Pictures/refresh.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center;
+-fx-border-width: 0;
+-fx-background-color: transparent;
+-fx-background-size: 30px 30px;
+}
+.button-refresh:hover{
+-fx-background-image: url('Pictures/refresh-hover.png');
+-fx-background-color: #ab8936
+}
+.button-refresh:hover:pressed{
+-fx-background-image: url('Pictures/refresh-pressed.png');
+-fx-background-color: #92762F
+}
+
+.button-clearall{
+-fx-background-image: url('Pictures/clear-all-red.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center;
+-fx-border-width: 0;
+-fx-background-color: transparent;
+-fx-background-size: 30px 30px;
+}
+.button-clearall:hover:pressed{
+-fx-background-image: url('Pictures/clear-all-white.png');
+-fx-background-color: #CE4B4C;
+}
+.button-clearall:hover{
+-fx-background-image: url('Pictures/clear-all-white.png');
+-fx-background-color: red;
+}
+
+.button-close{
+-fx-background-image: url('Pictures/close.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center;
+-fx-border-width: 0;
+-fx-background-color: transparent;
+-fx-background-size: 30px 30px;
+}
+.button-close:hover{
+-fx-background-image: url('Pictures/close-hover.png');
+}
+.button-close:hover:pressed{
+-fx-background-image: url('Pictures/close-pressed.png');
+}
+
+.button-yes{
+-fx-background-image: url('Pictures/check-white-brown.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center;
+-fx-border-width: 0;
+-fx-background-color: transparent;
+-fx-background-size: 20px 20px;
+}
+.button-yes:hover{
+-fx-background-image: url('Pictures/check-white-dbrown.png');
+}
+.button-yes:hover:pressed{
+-fx-background-image: url('Pictures/check-white-edbrown.png');
+}
+
+.button-no{
+-fx-background-image: url('Pictures/cross-white-brown.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center;
+-fx-border-width: 0;
+-fx-background-color: transparent;
+-fx-background-size: 20px 20px;
+}
+.button-no:hover{
+-fx-background-image: url('Pictures/cross-white-dbrown.png');
+}
+.button-no:hover:pressed{
+-fx-background-image: url('Pictures/cross-white-edbrown.png');
+}
+
+.button-add{
+-fx-background-image: url('Pictures/add-white-brown.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center;
+-fx-border-width: 0;
+-fx-background-color: transparent;
+-fx-background-size: 32px 32px;
+}
+.button-add:hover{
+-fx-background-image: url('Pictures/add-white-dbrown.png');
+}
+.button-add:hover:pressed{
+-fx-background-image: url('Pictures/add-white-edbrown.png');
+}
+
+.button-edit{
+-fx-background-image: url('Pictures/edit-white-brown.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center;
+-fx-border-width: 0;
+-fx-background-color: transparent;
+-fx-background-size: 32px 32px;
+}
+.button-edit:hover{
+-fx-background-image: url('Pictures/edit-white-dbrown.png');
+}
+.button-edit:hover:pressed{
+-fx-background-image: url('Pictures/edit-white-edbrown.png');
+}
+
+.pane-popup-generic{
+-fx-background-color: #ab8936;
+-fx-border-color: black;
+}

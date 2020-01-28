@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="TransactionPane" prefHeight="717.0" prefWidth="1090.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TransactionController">
+    <children>
+        <TableView fx:id="TransactionTableDetailView" layoutX="225.0" layoutY="38.0" onMouseClicked="#selectId" prefHeight="495.0" prefWidth="695.0">
+            <columns>
+                <TableColumn fx:id="Transaction_Id" prefWidth="109.0" text="Transaction Id" />
+                <TableColumn fx:id="Store_Id" text="Store Id" />
+                <TableColumn fx:id="Table_Id" prefWidth="75.66668701171875" text="Table Id" />
+            <TableColumn fx:id="Date_Time" prefWidth="168.0" text="Date Time" />
+            <TableColumn fx:id="Tax_Id" prefWidth="99.33331298828125" text="Tax Id" />
+            <TableColumn fx:id="Service_Id" prefWidth="163.66668701171875" text="Service Percent" />
+            </columns>
+        </TableView>
+        <Text fill="#1904ff" layoutX="30.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Id:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+        <TextField fx:id="trans_id" layoutX="113.0" layoutY="126.0" prefHeight="25.0" prefWidth="94.0" />
+        <Text layoutX="33.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.00000847876072" />
+        <TextField fx:id="store_id" layoutX="113.0" layoutY="194.0" onMouseClicked="#openStore" prefHeight="25.0" prefWidth="94.0" />
+      <Text fill="#1904ff" layoutX="69.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tax Id:" wrappingWidth="38.99999526143074">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <Text fill="#1904ff" layoutX="45.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Date Time:" wrappingWidth="69.00000333786011">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <Text fill="#1904ff" layoutX="58.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Table Id:" wrappingWidth="60.00000149011612">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <TextField fx:id="date_time" layoutX="113.0" layoutY="334.0" prefHeight="25.0" prefWidth="94.0" />
+      <TextField fx:id="tax_id" layoutX="113.0" layoutY="405.0" prefHeight="25.0" prefWidth="94.0" />
+      <Text fill="#1904ff" layoutX="50.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: blue;" text="Service Id:" wrappingWidth="60.000003933906555">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <TextField fx:id="table_id" layoutX="113.0" layoutY="261.0" onMouseClicked="#openGuest" prefHeight="25.0" prefWidth="94.0" />
+      <TextField fx:id="service_id" layoutX="113.0" layoutY="470.0" onMouseClicked="#OpenService" prefHeight="25.0" prefWidth="94.0" />
+      <Label layoutX="234.0" layoutY="541.0" onMouseClicked="#DeleteClick" prefHeight="36.0" prefWidth="77.0" style="-fx-font-size: 25; -fx-text-fill: blue; -fx-underline: true;" text="Delete" />
+      <Label layoutX="833.0" layoutY="541.0" onMouseClicked="#UpdateClick" prefHeight="36.0" prefWidth="87.0" style="-fx-font-size: 25; -fx-text-fill: blue; -fx-underline: true;" text="Update" />
+      <Label layoutX="529.0" layoutY="541.0" onMouseClicked="#Refresh" prefHeight="36.0" prefWidth="87.0" style="-fx-font-size: 25; -fx-text-fill: blue; -fx-underline: true;" text="Refresh" />
+      <Text fill="#1904ff" layoutX="58.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Store Id:" wrappingWidth="69.00000333786011">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Label layoutX="33.0" layoutY="541.0" onMouseClicked="#PrintBill" prefHeight="36.0" prefWidth="94.0" style="-fx-font-size: 25; -fx-text-fill: blue; -fx-underline: true;" text="Print Bill" />
+    </children>
+</AnchorPane>

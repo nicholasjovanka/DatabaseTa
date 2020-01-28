@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="StorePane" prefHeight="717.0" prefWidth="1090.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StoreController">
+    <children>
+        <TableView fx:id="StoreTableView" layoutX="225.0" layoutY="28.0" prefHeight="507.0" prefWidth="687.0">
+            <columns>
+                <TableColumn fx:id="Store_Id" prefWidth="143.66665649414062" text="Store Id" />
+                <TableColumn fx:id="Store_Name" prefWidth="229.33331298828125" text="Store Name" />
+                <TableColumn fx:id="Store_Location" prefWidth="312.66668701171875" text="Store Location" />
+            </columns>
+        </TableView>
+        <Text fill="#1904ff" layoutX="65.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Store Id:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+        <TextField fx:id="id" layoutX="113.0" layoutY="140.0" prefHeight="25.0" prefWidth="94.0" />
+        <Text fill="#1904ff" layoutX="20.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Store Location:" wrappingWidth="94.00000847876072">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+        <Text fill="#1904ff" layoutX="36.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Store Name:" wrappingWidth="76.99999526143074">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+        <TextField fx:id="name" layoutX="113.0" layoutY="256.0" prefHeight="25.0" prefWidth="94.0" />
+        <TextField fx:id="location" layoutX="113.0" layoutY="383.0" prefHeight="25.0" prefWidth="94.0" />
+      <Label layoutX="225.0" layoutY="553.0" onMouseClicked="#DeleteClick" style="-fx-font-size: 25; -fx-text-fill: blue; -fx-underline: true;" text="Delete" />
+      <Label layoutX="831.0" layoutY="560.0" onMouseClicked="#UpdateClick" style="-fx-font-size: 25; -fx-text-fill: blue; -fx-underline: true;" text="Update" />
+      <Label layoutX="539.0" layoutY="560.0" onMouseClicked="#InsertClick" style="-fx-font-size: 25; -fx-text-fill: blue; -fx-underline: true;" text="Insert" />
+      <Label layoutX="529.0" layoutY="606.0" onMouseClicked="#Refresh" style="-fx-font-size: 25; -fx-text-fill: blue; -fx-underline: true;" text="Refresh" />
+    </children>
+</AnchorPane>

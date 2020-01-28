@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="766.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ItemController">
+   <children>
+      <TableView fx:id="ItemTableView" layoutX="30.0" layoutY="14.0" onMouseClicked="#DescribeItem" prefHeight="631.0" prefWidth="582.0">
+        <columns>
+          <TableColumn fx:id="ItemIdColumn" prefWidth="267.0" text="Item Id" />
+          <TableColumn fx:id="ItemNameColumn" prefWidth="336.0" text="Item Name" />
+        </columns>
+      </TableView>
+      <Pane layoutX="635.0" layoutY="14.0" prefHeight="631.0" prefWidth="551.0" style="-fx-background-color: white; -fx-border-color: #ab8936; -fx-border-radius: 10; -fx-border-width: 3;">
+         <children>
+            <Label fx:id="ItemName" layoutX="196.0" layoutY="48.0" prefHeight="45.0" prefWidth="322.0" style="-fx-font-size: 30;" />
+            <Label layoutX="23.0" layoutY="139.0" prefHeight="45.0" prefWidth="159.0" style="-fx-font-size: 30;" text="Item Type  :" />
+            <Label layoutX="23.0" layoutY="226.0" prefHeight="45.0" prefWidth="159.0" style="-fx-font-size: 30;" text="Item Price  :" />
+            <Label layoutX="16.0" layoutY="48.0" prefHeight="45.0" prefWidth="173.0" style="-fx-font-size: 30;" text="Item Name :" />
+            <Label fx:id="ItemType" layoutX="194.0" layoutY="139.0" prefHeight="45.0" prefWidth="322.0" style="-fx-font-size: 30;" />
+            <Label fx:id="ItemPrice" layoutX="196.0" layoutY="226.0" prefHeight="45.0" prefWidth="322.0" style="-fx-font-size: 30;" />
+            <Label layoutX="72.0" layoutY="442.0" style="-fx-font-size: 20;" text="Quantity :" />
+            <TextField fx:id="QuantityField" layoutX="171.0" layoutY="447.0" />
+            <Label layoutX="339.0" layoutY="442.0" onMouseClicked="#plus" style="-fx-font-size: 25; -fx-font-weight: bold;" text="+" />
+            <Label layoutX="366.0" layoutY="442.0" onMouseClicked="#minus" style="-fx-font-size: 25; -fx-font-weight: bold;" text="-" />
+            <Button layoutX="214.0" layoutY="517.0" mnemonicParsing="false" onMouseClicked="#AddToCart" styleClass="button-generic" stylesheets="@style.css" text="ADD TO CART" />
+            <Button layoutX="214.0" layoutY="563.0" mnemonicParsing="false" onMouseClicked="#ClearCart" prefHeight="37.0" prefWidth="122.0" styleClass="button-generic" stylesheets="@style.css" text="CLEAR CART" />
+         </children>
+      </Pane>
+      <Pane fx:id="InsertPane" layoutX="288.0" layoutY="172.0" prefHeight="294.0" prefWidth="631.0" styleClass="pane-popup-generic" stylesheets="@style.css" visible="false">
+         <children>
+            <TextField fx:id="ItemNameField" layoutX="241.0" layoutY="99.0" prefHeight="25.0" prefWidth="275.0" />
+            <TextField fx:id="ItemTypeField" layoutX="241.0" layoutY="147.0" prefHeight="25.0" prefWidth="275.0" />
+            <TextField fx:id="ItemPriceField" layoutX="241.0" layoutY="193.0" prefHeight="25.0" prefWidth="275.0" />
+            <TextField fx:id="ItemIdField" layoutX="241.0" layoutY="53.0" prefHeight="25.0" prefWidth="275.0" />
+            <Label layoutX="170.0" layoutY="57.0" text="Item Id" textFill="WHITE" />
+            <Label layoutX="170.0" layoutY="103.0" text="Item Name" textFill="WHITE" />
+            <Label layoutX="170.0" layoutY="151.0" text="Item Type" textFill="WHITE" />
+            <Label layoutX="170.0" layoutY="197.0" text="Item Price" textFill="WHITE" />
+            <Button layoutX="279.0" layoutY="243.0" mnemonicParsing="false" onAction="#InsertClick" styleClass="button-inverted" stylesheets="@style.css" text="INSERT" />
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="596.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#Close" prefHeight="25.0" prefWidth="33.0" styleClass="button-close" stylesheets="@style.css" text="Button" />
+         </children>
+      </Pane>
+      <Pane fx:id="UpdatePane" layoutX="285.0" layoutY="172.0" prefHeight="294.0" prefWidth="631.0" styleClass="pane-popup-generic" stylesheets="@style.css" visible="false">
+         <children>
+            <TextField fx:id="ItemNameFieldUpdate" layoutX="241.0" layoutY="99.0" prefHeight="25.0" prefWidth="275.0" />
+            <TextField fx:id="ItemTypeFieldUpdate" layoutX="241.0" layoutY="147.0" prefHeight="25.0" prefWidth="275.0" />
+            <TextField fx:id="ItemPriceFieldUpdate" layoutX="241.0" layoutY="193.0" prefHeight="25.0" prefWidth="275.0" />
+            <Label layoutX="170.0" layoutY="103.0" text="Item Name" textFill="WHITE" />
+            <Label layoutX="170.0" layoutY="151.0" text="Item Type" textFill="WHITE" />
+            <Label layoutX="170.0" layoutY="197.0" text="Item Price" textFill="WHITE" />
+            <Button layoutX="276.0" layoutY="243.0" mnemonicParsing="false" onAction="#UpdateClick" styleClass="button-inverted" stylesheets="@style.css" text="UPDATE" />
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="596.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#Close" prefHeight="25.0" prefWidth="33.0" styleClass="button-close" stylesheets="@style.css" text="Button" />
+         </children>
+      </Pane>
+      <Pane fx:id="ConfirmationPane" layoutX="432.0" layoutY="230.0" prefHeight="200.0" prefWidth="358.0" style="-fx-background-color: #bdc3c7; -fx-border-color: black;" visible="false">
+         <children>
+            <Label layoutX="135.0" layoutY="42.0" prefHeight="17.0" prefWidth="89.0" text="Are you Sure ?" />
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="284.0" layoutY="163.0" mnemonicParsing="false" onMouseClicked="#Yes" styleClass="button-yes" stylesheets="@style.css" text="Button" />
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="23.0" layoutY="163.0" mnemonicParsing="false" onMouseClicked="#No" prefHeight="25.0" prefWidth="33.0" styleClass="button-no" stylesheets="@style.css" text="Button" />
+         </children>
+      </Pane>
+      <Button fx:id="Refresh" contentDisplay="GRAPHIC_ONLY" layoutX="1048.0" layoutY="646.0" mnemonicParsing="false" onMouseClicked="#Refresh" prefHeight="34.0" prefWidth="33.0" styleClass="button-refresh" stylesheets="@style.css" text="Refresh" />
+      <Button fx:id="DeleteButton" contentDisplay="GRAPHIC_ONLY" layoutX="1081.0" layoutY="645.0" mnemonicParsing="false" onMouseClicked="#Delete" prefHeight="35.0" prefWidth="35.0" styleClass="button-delete" stylesheets="@style.css" text="Delete" />
+      <Button fx:id="UpdateButton" contentDisplay="GRAPHIC_ONLY" layoutX="1116.0" layoutY="645.0" mnemonicParsing="false" onMouseClicked="#Update" prefHeight="35.0" prefWidth="35.0" styleClass="button-edit" stylesheets="@style.css" text="Update" />
+      <Button fx:id="InsertButton" contentDisplay="GRAPHIC_ONLY" layoutX="1151.0" layoutY="645.0" mnemonicParsing="false" onMouseClicked="#Insert" prefHeight="35.0" prefWidth="35.0" styleClass="button-add" stylesheets="@style.css" text="Insert" />
+   </children>
+</Pane>
